@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy for Lumo Flash</title>
+    <style>
+        /* --- General Styling & Variables --- */
+        :root {
+            --light-bg: #F5F5F7;
+            --light-card-bg: #FFFFFF;
+            --light-text-primary: #1C1C1E;
+            --light-text-secondary: #8A8A8E;
+            --light-accent: #5E35B1;
+
+            --dark-bg: #121212;
+            --dark-card-bg: #1E1E1E;
+            --dark-text-primary: #E1E1E1;
+            --dark-text-secondary: #A4A4A4;
+            --dark-accent: #9575CD;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: background-color 0.3s;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-top: 40px;
+            border-bottom: 2px solid;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            font-size: 1.2em;
+            margin-top: 25px;
+        }
+
+        p, li {
+            font-size: 1.1em;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.7;
+        }
+
+        /* --- Dark/Light Mode Theme --- */
+        body.light-mode {
+            background-color: var(--light-bg);
+            color: var(--light-text-secondary);
+        }
+        .light-mode .container {
+            background-color: var(--light-card-bg);
+        }
+        .light-mode h1, .light-mode h2, .light-mode h3, .light-mode strong {
+            color: var(--light-text-primary);
+        }
+        .light-mode h2 {
+            border-color: #eee;
+        }
+        .light-mode a {
+            color: var(--light-accent);
+        }
+
+        body.dark-mode {
+            background-color: var(--dark-bg);
+            color: var(--dark-text-secondary);
+        }
+        .dark-mode .container {
+            background-color: var(--dark-card-bg);
+        }
+        .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode strong {
+            color: var(--dark-text-primary);
+        }
+        .dark-mode h2 {
+            border-color: #333;
+        }
+        .dark-mode a {
+            color: var(--dark-accent);
+        }
+
+        /* --- Theme Switcher --- */
+        .theme-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: var(--light-card-bg);
+            border-radius: 50px;
+            padding: 5px;
+            cursor: pointer;
+            border: 1px solid #eee;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .dark-mode .theme-switcher {
+            background-color: var(--dark-card-bg);
+            border-color: #333;
+        }
+        .theme-switcher .icon {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body class="light-mode">
+
+    <div class="theme-switcher" id="theme-switcher">
+        <span class="icon">🌙</span>
+    </div>
+
+    <div class="container">
+        <h1>Privacy Policy for Lumo Flash</h1>
+        <p style="text-align: center;"><strong>Last Updated:</strong> September 27, 2025</p>
+
+        <p>This privacy policy governs your use of the software application "Lumo Flash" ("Application") for mobile devices. This Application provides flashlight and flash alert functionalities.</p>
+
+        <h2>Information We Collect</h2>
+        <p>Lumo Flash is designed with your privacy in mind. We do **not** collect, store, or share any personally identifiable information.</p>
+        
+        <h3>1. Non-Personal Information</h3>
+        <p>The Application itself does not collect any user data. However, we may use third-party services like Google AdMob for advertising, which may collect anonymous data for ad serving purposes, such as ad requests and interactions. We do not have access to this data.</p>
+        
+        <h3>2. Sensitive Permissions Explained</h3>
+        <p>To provide its core features, Lumo Flash requires access to certain sensitive permissions. We want to be completely transparent about why we need them:</p>
+        <ul>
+            <li>
+                <strong>Camera (android.permission.CAMERA):</strong> This permission is required **solely** to access and control the camera's LED flash to function as a flashlight and for flash alerts. The Application **never** takes pictures, records video, or accesses your camera's image sensor.
+            </li>
+            <li>
+                <strong>Notification Listener (android.permission.BIND_NOTIFICATION_LISTENER_SERVICE):</strong> This is a special access permission required to detect incoming notifications from other applications. This allows Lumo Flash to provide flash alerts for your selected apps. The Application **only reads the source application's package name and notification category (e.g., 'call')**. We **do not** read, collect, or store the content of your notifications, such as messages or contact names.
+            </li>
+            <li>
+                <strong>Query All Packages (android.permission.QUERY_ALL_PACKAGES):</strong> This permission is required to display a complete list of installed applications on the "Select Apps" screen. This is a core feature that allows you to choose which specific apps you want to receive flash alerts for. The Application **only uses this list for display purposes within the app** and does not send this data anywhere.
+            </li>
+        </ul>
+
+        <h2>How We Use Your Information</h2>
+        <p>Since we do not collect any personal information, we do not use it in any way. The permissions requested are used exclusively on your device to enable the Application's functionality.</p>
+
+        <h2>Data Security</h2>
+        <p>All processing related to notifications and app lists happens locally on your device. No sensitive information ever leaves your phone.</p>
+        
+        <h2>Third-Party Services</h2>
+        <p>The Application may display ads from Google AdMob. Google's privacy policy can be found at <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>.</p>
+
+        <h2>Changes to This Privacy Policy</h2>
+        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at: <a href="mailto:support@lumoflash.com">support@lumoflash.com</a></p>
+    </div>
+
+    <script>
+        const themeSwitcher = document.getElementById('theme-switcher');
+        const body = document.body;
+        const icon = themeSwitcher.querySelector('.icon');
+
+        // Function to set the theme
+        function setTheme(theme) {
+            if (theme === 'dark') {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                icon.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                icon.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Event listener for the switcher
+        themeSwitcher.addEventListener('click', () => {
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            setTheme(currentTheme === 'light' ? 'dark' : 'light');
+        });
+
+        // Apply saved theme on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            setTheme(savedTheme);
+        });
+    </script>
+</body>
+</html>
